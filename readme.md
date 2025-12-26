@@ -1,5 +1,10 @@
 # geerpc
 
+## go
+Go 是一门：以“过程/函数”为基础，
+用“类型 + 接口 + 组合”来组织代码，
+面向工程与并发的语言。
+
 ## ref
 开源：
 
@@ -51,3 +56,11 @@ codec = encode + decode，一般是 Coder / Decoder（编码器 / 解码器） �
 
 ## 5. gob
 gob 通常指的是 Go 语言（Golang）标准库中的一种序列化格式与机制，全名可以理解为 Go Binary（虽然不是官方全称）。
+
+## 6. 服务名和方法名
+例如一个 RPC 调用 `err = client.Call("Arith.Multiply", args, &reply)`
+以面向对象的思维，Arith 是类名，Multiply 是类的方法
+在 Go 中，
+    Arith 不是类（class），而是一个 类型（type / struct）
+    Multiply 是定义在 Arith 上的 方法（method）
+    Arith.Multiply 是 RPC 暴露出来的 服务名.方法名
